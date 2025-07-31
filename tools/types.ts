@@ -42,3 +42,7 @@ export interface GSheetsReadInput {
   sheetId?: number; // Optional specific sheet ID
 }
 
+export interface GDocsGetSuggestionsInput {
+  documentId: string;
+}
+

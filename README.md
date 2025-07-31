@@ -41,6 +41,12 @@ This project includes code originally developed by Anthropic, PBC, licensed unde
     - `value` (string): New cell value.
   - **Output**: Confirms the updated value in the specified cell.
 
+- **gdocs_get_suggestions**
+  - **Description**: Get suggestions from a Google Document.
+  - **Input**:
+    - `documentId` (string): ID of the Google Document to get suggestions from.
+  - **Output**: Returns all suggestions in the document with their details and locations.
+
 ### Resources
 
 The server provides access to Google Drive files:
@@ -59,7 +65,7 @@ The server provides access to Google Drive files:
 1. [Create a new Google Cloud project](https://console.cloud.google.com/projectcreate)
 2. [Enable the Google Drive API](https://console.cloud.google.com/workspace-api/products)
 3. [Configure an OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent) ("internal" is fine for testing)
-4. Add OAuth scopes `https://www.googleapis.com/auth/drive.readonly`, `https://www.googleapis.com/auth/spreadsheets`
+4. Add OAuth scopes `https://www.googleapis.com/auth/drive.readonly`, `https://www.googleapis.com/auth/spreadsheets`, `https://www.googleapis.com/auth/documents`
 5. In order to allow interaction with sheets and docs you will also need to enable the [Google Sheets API](https://console.cloud.google.com/apis/api/sheets.googleapis.com/) and [Google Docs API](https://console.cloud.google.com/marketplace/product/google/docs.googleapis.com) in your workspaces Enabled API and Services section.
 6. [Create an OAuth Client ID](https://console.cloud.google.com/apis/credentials/oauthclient) for application type "Desktop App"
 7. Download the JSON file of your client's OAuth keys
